@@ -6,7 +6,7 @@
 #    By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/28 13:35:01 by dajimene          #+#    #+#              #
-#    Updated: 2022/12/28 21:42:24 by dajimene         ###   ########.fr        #
+#    Updated: 2022/12/30 16:08:45 by dajimene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ RM			= rm -f
 AR			 = ar rcs
 
 #SOURCES
-SRC_FILES	= ft_printf
+SRC_FILES	= ft_printf utils
 SRC			= $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ			= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 
@@ -43,12 +43,12 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJSF)
 $(OBJSF):
 	@mkdir -p $(OBJ_DIR)
 clean:
-	@$(RM) -rf $(OBJ_DIR)
+	$(RM) -rf $(OBJ_DIR)
 	@make clean -C $(LIBFT)
-	@$(RM) $(OBJSF)
+	$(RM) $(OBJSF)
 	
 fclean:		clean
-	@$(RM) $(NAME)
-	@$(RM) $(LIBFT)/libft.a
+	$(RM) $(NAME)
+	$(RM) $(LIBFT)/libft.a
 			
 re:			fclean all

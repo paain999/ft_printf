@@ -6,11 +6,11 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:11:33 by dajimene          #+#    #+#             */
-/*   Updated: 2022/12/12 14:11:33 by dajimene         ###   ########.fr       */
+/*   Updated: 2022/12/30 13:35:44 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t size)
 {

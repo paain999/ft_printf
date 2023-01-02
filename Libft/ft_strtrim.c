@@ -6,11 +6,11 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:33:14 by dajimene          #+#    #+#             */
-/*   Updated: 2022/12/21 16:42:33 by dajimene         ###   ########.fr       */
+/*   Updated: 2022/12/30 13:36:47 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static	int	ft_flag(char const *set, char c)
 {

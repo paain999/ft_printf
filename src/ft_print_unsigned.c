@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 19:09:40 by dajimene          #+#    #+#             */
-/*   Updated: 2022/12/30 13:35:53 by dajimene         ###   ########.fr       */
+/*   Created: 2023/01/02 12:29:31 by dajimene          #+#    #+#             */
+/*   Updated: 2023/01/02 13:13:07 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "../include/ft_printf.h"
 
-void	ft_putendl_fd(char *s, int fd)
+int	ft_print_unsigned(unsigned int n)
 {
-	while (*s)
-		write(fd, s++, 1);
-	write(fd, "\n", 1);
+	char	*num;
+	int		len;
+	
+	if (n == 0)
+		len += write(1, "0", 1);
+	else
+	{
+		num = ft_itoa((int)n);
+		len += ft_printstr(num);
+		free(num);
+	}
+	return (len);
 }

@@ -1,20 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 19:09:40 by dajimene          #+#    #+#             */
-/*   Updated: 2022/12/30 13:35:53 by dajimene         ###   ########.fr       */
+/*   Created: 2023/01/02 13:18:10 by dajimene          #+#    #+#             */
+/*   Updated: 2023/01/02 13:19:59 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
-
-void	ft_putendl_fd(char *s, int fd)
-{
-	while (*s)
-		write(fd, s++, 1);
-	write(fd, "\n", 1);
-}
+#include "../include/ft_printf.h"
