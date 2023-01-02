@@ -1,26 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_pointer.c                                 :+:      :+:    :+:   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 13:16:45 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/02 13:47:43 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/02 19:03:48 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
+#include "../include/libft.h"
 
-/*int	ft_hex_len(uintptr_t ptr)
+int	ft_ptrlen(uintptr_t ptr)
 {
 	int	len;
 	
 	len = 0;
-	if()
+	while (ptr != 0)
+	{
+		len++;
+		ptr /= 16;
+	}
+	return (len);
 }
-*/
-int	ft_print_pointer(unsigned long long int ptr)
+void	ft_putptr(uintptr_t ptr)
+{
+	if (ptr > 16)
+	{
+		ft_putptr(ptr / 16);
+		ft_putptr(ptr % 16);
+	}
+	else
+	{
+		if (ptr <= 9)
+			ft_putchar_fd(ptr + '0', 1);
+		else
+			ft_putchar_fd((ptr - 10 + 'a'), 1);
+	}
+}
+int	ft_print_ptr(unsigned long long ptr)
 {
 	int	len;
 	
