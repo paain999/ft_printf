@@ -6,14 +6,14 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 13:18:10 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/02 20:43:21 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:02:35 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include "../include/libft.h"
 
-int	ft_hex_len(unsigned long long num)
+static	int	ft_hex_len(unsigned long long num)
 {
 	int	len;
 	
@@ -26,7 +26,7 @@ int	ft_hex_len(unsigned long long num)
 	return (len);
 }
 
-void	ft_put_hex(unsigned long long num, const char format)
+static	void	ft_put_hex(unsigned long long num, const char format)
 {
 	if (num >= 16)
 	{

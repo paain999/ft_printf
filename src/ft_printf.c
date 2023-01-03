@@ -6,14 +6,14 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:01:01 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/02 20:46:46 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:24:22 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include <stdio.h>
 
-int	formats(va_list args, char const format)
+static	int	formats(va_list args, char const format)
 {
 	int	len;
 	
@@ -59,7 +59,7 @@ int	ft_printf(char const *s, ...)
 	return (len);
 }
 
-int main(void)
+/*int main(void)
 {
 	int		n;
 	char	h;
@@ -69,4 +69,4 @@ int main(void)
 	n = ft_printf("Letra: %c", h);
 	printf("%d", n);
 	return (0);
-}
+}*/

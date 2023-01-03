@@ -6,14 +6,14 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 13:16:45 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/02 19:03:48 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:29:25 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include "../include/libft.h"
 
-int	ft_ptrlen(uintptr_t ptr)
+static	int	ft_ptrlen(uintptr_t ptr)
 {
 	int	len;
 	
@@ -25,7 +25,7 @@ int	ft_ptrlen(uintptr_t ptr)
 	}
 	return (len);
 }
-void	ft_putptr(uintptr_t ptr)
+static	void	ft_putptr(uintptr_t ptr)
 {
 	if (ptr > 16)
 	{
@@ -50,6 +50,8 @@ int	ft_print_ptr(unsigned long long ptr)
 		len += write(1,"0", 1);
 	else
 	{
-		
+		len += ft_ptrlen(ptr);
+		ft_putptr(ptr);
 	}
+	return (len);
 }
