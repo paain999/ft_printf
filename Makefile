@@ -6,7 +6,7 @@
 #    By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/28 13:35:01 by dajimene          #+#    #+#              #
-#    Updated: 2023/01/03 14:05:25 by dajimene         ###   ########.fr        #
+#    Updated: 2023/01/04 12:55:41 by dajimene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ $(LIBFT):
 	@cp $(LIBFT) $(NAME)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJSF)
-	@$(CC) $(CFLAGS) -I $(INCLUDE) -I $(LIBFT_DIR) -c $< -o $@	
+	@$(CC) $(CFLAGS) $(INCLUDE) -I $(LIBFT_DIR) -c $< -o $@	
 			
 $(OBJSF):
 	@mkdir -p $(OBJ_DIR)
@@ -53,3 +53,5 @@ fclean:		clean
 	$(RM) $(LIBFT)
 			
 re:	fclean all
+
+.PHONY: all clean fclean
