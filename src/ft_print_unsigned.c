@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 12:29:31 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/04 13:04:14 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/04 15:27:53 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	ft_print_unsigned(unsigned int n)
 	int		len;
 	
 	len = 0;
-	if(n < 0)
-		n *= -1;
 	if (n == 0)
 		len += write(1, "0", 1);
 	else
