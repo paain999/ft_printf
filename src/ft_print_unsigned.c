@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 12:29:31 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/04 15:27:53 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/09 18:52:12 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_print_unsigned(unsigned int n)
 		len += write(1, "0", 1);
 	else
 	{
-		num = ft_itoa((int)n);
+		num = ft_itoa(n);
 		len += ft_printstr(num);
 		free(num);
 	}
