@@ -1,5 +1,6 @@
 #VARIABLES:
 NAME = libft.a
+.SILENT:
 INCLUDE = ../include
 AR = ar rcs
 RM = rm -f
@@ -19,7 +20,7 @@ ft_putstr_fd ft_putendl_fd ft_putnbr_fd\
 OBJ_DIR = obj/
 SRC		= $(addsuffix .c, $(SRC_FILES))
 OBJS	= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
-#OBJS = $(SRC_FILES:.c=.o)
+#OBJS = $(SRC_FILES:%.c=OBJ_DIR:%.o)
 OBJSF	= .cache_exists
 
 all: $(NAME)
@@ -35,11 +36,12 @@ $(OBJSF):
 		@mkdir -p $(OBJ_DIR)
 
 clean:
-	@$(RM) -rf $(OBJ_DIR)
-	@$(RM) $(OBJSF)
+	$(RM) -rf $(OBJ_DIR)
+	$(RM) $(OBJSF)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
+.PHONY: all clean fclean
