@@ -6,17 +6,17 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 18:58:02 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/09 18:58:05 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/10 15:12:33 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
+#include "../include/ft_printf.h"
 
-#define INT_MIN -2147483648
-#define INT_MAX +2147483647
-#define UINT_MAX +4294967295
+//#define INT_MIN -2147483648
+//#define INT_MAX +2147483647
+//#define UINT_MAX 4294967295
 int	main(void)
 {
 	char	*ptr;

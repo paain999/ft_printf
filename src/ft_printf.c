@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:01:01 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/03 13:24:22 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/10 15:04:25 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static	int	formats(va_list args, char const format)
 	return(len);
 }
 
-int	ft_printf(char const *s, ...)
+int	ft_printf(const char *s, ...)
 {
 	int	len;
 	int	i;

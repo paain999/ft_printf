@@ -6,7 +6,7 @@
 #    By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/28 13:35:01 by dajimene          #+#    #+#              #
-#    Updated: 2023/01/04 12:55:41 by dajimene         ###   ########.fr        #
+#    Updated: 2023/01/10 15:10:56 by dajimene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,11 @@ RM			= rm -f
 AR			 = ar rcs
 
 #SOURCES
-SRC_FILES	= ft_printf utils ft_print_hex ft_print_ptr ft_print_unsigned
+SRC_FILES	= ft_printf utils ft_print_hex ft_print_ptr ft_print_unsigned main
 SRC			= $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJ			= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 
-OBJSF		=.cache_exists
+#OBJSF		=.cache_exists
 
 all: 		$(NAME)
 
@@ -38,11 +38,12 @@ $(LIBFT):
 	@make -C $(LIBFT_DIR)
 	@cp $(LIBFT) $(NAME)
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJSF)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) $(INCLUDE) -I $(LIBFT_DIR) -c $< -o $@	
 			
-$(OBJSF):
-	@mkdir -p $(OBJ_DIR)
+#$(OBJSF):
+#	@mkdir -p $(OBJ_DIR)
 clean:
 	$(RM) -rf $(OBJ_DIR)
 	@make clean -C $(LIBFT_DIR)

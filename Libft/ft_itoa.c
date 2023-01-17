@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 15:54:59 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/09 18:52:08 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/17 11:26:37 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	int	lenght(long int n)
 	len = 0;
 	if (n < 0)
 	{
-		//len++;
+		len++;
 		n = -n;
 	}
 	while (n >= 1)
@@ -30,7 +30,7 @@ static	int	lenght(long int n)
 	return (len);
 }
 
-static	char	*cast(long int nbr, int len, char *str)
+static	char	*cast(long int nbr, int len, char *str, int isneg)
 {
 	if (nbr != 0)
 		str = ft_calloc(len + 1, sizeof(char));
@@ -40,7 +40,7 @@ static	char	*cast(long int nbr, int len, char *str)
 		return (NULL);
 	if (nbr < 0)
 	{
-		//isneg++;
+		isneg++;
 		nbr = -nbr;
 	}
 	while (--len)
@@ -48,14 +48,14 @@ static	char	*cast(long int nbr, int len, char *str)
 		str[len] = nbr % 10 + '0';
 		nbr /= 10;
 	}
-	/* if (isneg)
-		str[0] = '-'; */
-	//else
+	if (isneg)
+		str[0] = '-';
+	else
 		str[0] = nbr % 10 + '0';
 	return (str);
 }
 
-char	*ft_itoa(unsigned int n)
+char	*ft_itoa(int n)
 {
 	int			len;
 	int			isneg;
@@ -66,7 +66,7 @@ char	*ft_itoa(unsigned int n)
 	isneg = 0;
 	len = lenght(nbr);
 	str = 0;
-	str = cast(nbr, len, str);
+	str = cast(nbr, len, str, isneg);
 	if (!str)
 		return (0);
 	return (str);
