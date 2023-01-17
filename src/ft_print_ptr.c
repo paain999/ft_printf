@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 13:16:45 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/03 13:29:25 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/01/17 11:31:42 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static	int	ft_ptrlen(uintptr_t ptr)
 }
 static	void	ft_putptr(uintptr_t ptr)
 {
-	if (ptr > 16)
+	if (ptr >= 16)
 	{
 		ft_putptr(ptr / 16);
 		ft_putptr(ptr % 16);
