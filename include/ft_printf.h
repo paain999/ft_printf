@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:00:01 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/02 20:33:56 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/04/04 12:43:14 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int	ft_printf(char const *format, ...);
 int	ft_putchar(int c);
-int ft_printstr(char *str);
+int	ft_printstr(char *str);
 int	ft_printnbr(int n);
 int	ft_printpercent(void);
 int	ft_print_unsigned(unsigned int n);

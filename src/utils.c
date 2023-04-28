@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 16:18:51 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/04 14:30:14 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/04/28 18:45:41 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_printstr(char *str)
 	len = 0;
 	if (str == NULL)
 	{
-		write(1,"(null)", 6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (str[i])
@@ -43,7 +43,7 @@ int	ft_printnbr(int n)
 {
 	int		len;
 	char	*num;
-	
+
 	len = 0;
 	num = ft_itoa(n);
 	len += ft_printstr(num);

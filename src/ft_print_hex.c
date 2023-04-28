@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 13:18:10 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/03 13:02:35 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/04/04 12:44:22 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static	int	ft_hex_len(unsigned long long num)
 {
 	int	len;
-	
+
 	len = 0;
 	while (num != 0)
 	{
@@ -39,7 +39,7 @@ static	void	ft_put_hex(unsigned long long num, const char format)
 			ft_putchar_fd(num + '0', 1);
 		else
 		{
-			if(format == 'x')
+			if (format == 'x')
 				ft_putchar_fd((num - 10 + 'a'), 1);
 			else if (format == 'X')
 				ft_putchar_fd((num - 10 + 'A'), 1);

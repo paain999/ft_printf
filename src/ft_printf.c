@@ -6,7 +6,7 @@
 /*   By: dajimene <dajimene@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:01:01 by dajimene          #+#    #+#             */
-/*   Updated: 2023/01/03 13:24:22 by dajimene         ###   ########.fr       */
+/*   Updated: 2023/04/28 18:44:34 by dajimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static	int	formats(va_list args, char const format)
 {
 	int	len;
-	
+
 	len = 0;
 	if (format == 'c')
 		len += ft_putchar(va_arg(args, int));
@@ -32,15 +32,15 @@ static	int	formats(va_list args, char const format)
 			len += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')
 			len += ft_printpercent();
-	return(len);
+	return (len);
 }
 
 int	ft_printf(char const *s, ...)
 {
-	int	len;
-	int	i;
-	va_list args;
-	
+	int		len;
+	int		i;
+	va_list	args;
+
 	i = 0;
 	len = 0;
 	va_start(args, s);
